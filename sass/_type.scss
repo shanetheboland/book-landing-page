@@ -24,3 +24,41 @@ h6,.f6 {      font-size: 16px; }
 
 small, .small {       font-size: 12px; }
 
+
+/* ==========================================================================
+   TYPE
+
+   - Fonts
+   - Headers
+   - Copy
+
+   ========================================================================== */
+
+/* Headers
+   ========================================================================== */
+h1, h2, h3, h4, p { margin: 0; }
+
+//H1 huge page headers
+h1, .h1 { font: normal 400 64px/1.40625 $header-font; margin-bottom: $spacing-unit; color: $link-color; text-shadow: 1px 1px $white; }
+//H2 secondary subtitle headers
+h2, .h2 { font: normal 400 48px/1.25 $header-font; }
+//H3 in-page headers, section headers
+h3, .h3 { font: normal 400 32px/1.875 $header-font; margin-top: $spacing-unit;}
+//SMALL Bold, all caps, used for navigation links, dates
+small, .small { font: normal 700 14px/2.14285 $body-font; text-transform: uppercase; letter-spacing: 0.1em; }
+//PARAGRAPH Used for paragraph/body text
+p { font: normal 400 20px/1.5 $body-font; margin-bottom: $spacing-unit;}
+
+/*
+  =========================================================================== */
+
+.intro {
+	padding: 0 $spacing-unit;
+	text-align: center;
+}
+
+hr {
+    border: 0;
+    border-bottom: solid $border-radius $gray;
+    margin: $spacing-unit auto;
+}

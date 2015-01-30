@@ -1,1 +1,50 @@
-html, body { height: 100%; }
+/* ==========================================================================
+   SITE STYLES
+   ========================================================================== */
+/* Preserve some sanity */
+
+
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+	height: 100%;
+    font: normal 400 20px/1.5 $body-font;
+    color: $text-color;
+    background-color: $background-color;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+}
+// Images
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+// Links
+a {
+    color: $link-color;
+    text-decoration: none;
+    @include transition(color);
+    &:visited {
+        color: $link-color;
+    }
+    &:hover {
+        color: darken($link-color,15%);
+    }
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}

@@ -2,3 +2,38 @@
    VARIABLES
    ========================================================================== */
 
+// Fonts
+$body-font: 'Open Sans', Helvetica, Arial, sans-serif;
+$header-font: 'Raleway', Helvetica, Arial, sans-serif;
+
+//Colors
+$white: #F5F5F2;
+$lightgray: #EEEEE6;
+$gray: #A2A1AC;
+$black: #222222;
+$blue: #5A83C6;
+$darkblue: darken($blue,15%);
+$red: #CA030E;
+$darkred: darken($red,15%);
+$brown: #5E5137;
+
+// Color Aliases
+$background-color: $white;
+$primary-color:      $red;
+$link-color:	    $blue;
+$text-color:       $black;
+
+
+// Spacing
+$spacing-unit:    15px;
+$lg-spacing-unit: $spacing-unit * 2; //60px
+
+$border-radius: 4px;
+
+
+//Mixins
+@mixin transition($property) {
+	//Sets transitions
+  transition:$property 0.4s ease-in-out;
+  -webkit-transition:$property 0.4s ease-in-out;
+}

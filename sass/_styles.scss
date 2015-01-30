@@ -9,8 +9,25 @@
    - Medium
    - Large
    ========================================================================== */
+.box {
+   border-radius: $border-radius;
+   border: $border-radius solid $primary-color;
+   padding: $spacing-unit;
+   padding-bottom: $lg-spacing-unit;
+}
+.no-border {
+   border: 0;
+}
 
+header {
+   background-color: $lightgray;
+   box-shadow: 2px 2px 2px $gray;
+}
 
+footer {
+   background-color: $lightgray;
+   box-shadow: 2px 2px 2px $gray;
+}
 /* Medium and Up - Targets everything larger than mobile
    ========================================================================== */
 
