@@ -1,3 +1,7 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
 .button {
 	@include transition(all);
 	background: $blue;
@@ -49,12 +53,32 @@
 }
 
 .two-buttons {
-
 	.button {
 		width: 50%;
 		display: inline-block;
 		float: left;
 		padding: $border-radius*2 $border-width;
 	}
-
 }
+
+.arrow-button:after {
+	transition: all .6s ease;
+	opacity:0;
+	content: "";
+	display: inline-block;
+	margin: 0;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.arrow-button:hover:after {
+	margin-left: 5px;
+	opacity:1;
+	content: "\e600";
+	font-family: 'icomoon';
+}
+
