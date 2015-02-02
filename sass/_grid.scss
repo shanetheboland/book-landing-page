@@ -82,6 +82,7 @@
  .align-center { text-align: center !important; }
  .align-left   { text-align: left !important; }
  .align-right  { text-align: right !important; }
+ .justified    { text-align: justify !important; }
  .pull-left    { float: left !important; }
  .pull-right   { float: right !important; }
 
@@ -93,15 +94,16 @@
  }
 
  /* Hide elements using this class by default */
- .only-on-mobiles {
+ .only-on-mobile {
    display: none !important;
  }
 
  /* Responsive Stuff */
  @media screen and (max-width: 768px) {
    /* Stack anything that isn’t full-width on smaller screens 
-      and doesn't provide the no-stacking-on-mobiles class */
-   .grid:not(.no-stacking-on-mobiles) > .unit {
+      and doesn't provide the no-stacking-on-mobile class */
+   .grid:not(.no-stacking-on-mobile) > .unit,
+   .grid:not(.no-stacking-on-mobile) > .unit > .unit {
      width: 100% !important;
      padding-left: $spacing-unit;
      padding-right: $spacing-unit;
@@ -112,13 +114,13 @@
    }
 
    /* Sometimes, you just want to be different on small screens */
-   .center-on-mobiles {
+   .center-on-mobile {
      text-align: center !important;
    }
-   .hide-on-mobiles {
+   .hide-on-mobile {
      display: none !important;
    }
-   .only-on-mobiles {
+   .only-on-mobile {
      display: block !important;
    }
  }

@@ -10,34 +10,49 @@
     <meta name="description" content="Retirement: Different by Design by Dr. Rick Steiner, Are You Really Ready to Retire?">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/mnml.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,700|Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,400italic' rel='stylesheet' type='text/css'>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="js/script.min.js"></script>
   </head>
-  <body>
-    
-  <header class="grid align-center">
+  <body id="skrollr-body">
 
-    <div class="unit three-fourths centered">
-      <h1 class="animated slideInDown">Are You Ready to Retire?</h1>
+  <header class="grid">
+    <div class="unit whole align-center">
+      <h3><img src="images/book.svg" height="50" style="vertical-align:middle;"> Retirement: Different by Design</h3>
     </div>
-
-    <div class="unit three-fourths centered">
-      <p class="animated slideInDown">My name is Dr. Rick and I wrote, <b>Retirement: Different by Design</b>, because I failed.  That’s right, I failed to accept what life was offering me, a second chance, a Mulligan, life’s one and only do-over.  So I set out, as someone who has spent a lifetime dissecting, studying and then changing social system, to find out what this thing called retirement is all about, how to order its moving parts; and, why retirement works for some but not for others so you don’t do what I did.</p>
-      <hr class="animated slideInUp">
-    </div>
-
   </header>
+
+
+  <section class="grid intro" data-top="opacity:1;" data-top-bottom="opacity:.1;">
+    <div class="unit three-quarters centered cf">
+
+      <div class="unit half animated slideInLeft center-on-mobile lh-2x">
+        <h1>Are You Ready to Retire?</h1>
+        <h3 style="font-weight:300;" class="hide-on-mobile">Get the lifestyle YOU deserve.</h3>
+        <p>My name is Dr. Rick and I wrote, <b>Retirement: Different by Design</b>, because I failed. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="two-buttons">
+          <a href="#" class="button">Take the Survey</a>
+          <a href="#" class="button secondary">Buy Now $19</a>
+        </div>
+      </div>
+      <div class="unit half animated slideInRight align-right center-on-mobile">
+        <img src="images/book-cover.jpg" height="450">
+      </div>
+
+    </div>
+  </section>
+
 
   <main class="grid">
 
     <div class="unit two-fifths">
 
-      <div class="box no-border">
-        
-        <p><span class="h2">1.</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p><span class="h2">2.</span> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p><span class="h2">3.</span> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="box no-border lh-2x">
+        <h3>Testimonials or Whatever</h3>
+        <p><span class="h3">1.</span> <b>Retirement can be hard.</b> 8 out of 10 senior citizens aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p><span class="h3">2.</span> <b>Get the lifestyle you deserve.</b> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat occaecat cupidatat non.</p>
+        <p><span class="h3">3.</span> <b>Retire on your own terms.</b> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint proident.</p>
 
       </div>
 
@@ -46,10 +61,11 @@
     <div class="unit three-fifths">
 
       <div class="box">
-        <h2 class="align-center">Dr. Rick’s Retirement Readiness Questionnaire</h2>
+        <h2 class="align-center">Dr. Rick’s Retirement Readiness Survey</h2>
         <hr>
               <section>
-                <form method="POST" action="http://formspree.io/sboland926@gmail.com" id="theForm" class="simform">
+              <p>Total Score: <span id="totalSum"></span></p>
+                <form id="theForm" class="simform">
                   <div class="simform-inner">
                     <ol class="questions">
                       <li>
@@ -178,7 +194,7 @@
                       <button class="submit" id="submit" value="Send" type="submit">Send answers</button>
                     </ol><!-- /questions -->
                     <div class="controls">
-                      <button class="next"></button>
+                      <button class="next">NEXT</button>
                       <div class="progress"></div>
                       <span class="number">
                         <span class="number-current"></span>
@@ -200,6 +216,7 @@
 
     <div class="unit one-third">
       <div class="box no-border">
+        <img src="images/book-blue.svg" height="50">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" class="button">Do This Thing</a>
       </div>
@@ -207,23 +224,26 @@
 
     <div class="unit one-third">
       <div class="box no-border">
+        <img src="images/book.svg" height="50">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href="#" class="button">Do This Thing</a>
+        <a href="#" class="button secondary">Do This Thing</a>
       </div>
     </div>
 
     <div class="unit one-third">
       <div class="box no-border">
+        <img src="images/book-blue.svg" height="50">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         <a href="#" class="button">Do This Thing</a>
       </div>
     </div>
 
   </footer>
-
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.29/skrollr.min.js"></script>
       <script src="js/classie.js"></script>
       <script src="js/stepsForm.js"></script>
       <script>
+        var s = skrollr.init();
         var theForm = document.getElementById( 'theForm' );
                           //disable form autocomplete
                           theForm.setAttribute( "autocomplete", "off" );
@@ -236,12 +256,26 @@
             
 
             var messageEl = theForm.querySelector( '.final-message' );
-            messageEl.innerHTML = '<h1>Form Results</h1>';
+            messageEl.innerHTML = 'Form Results are here.';
             classie.addClass( messageEl, 'show' );
 
             document.getElementById('submit').click();
           }
         } );
+
+        $("#theForm").change("input[type=radio]",function() {
+            var total = 0;
+            
+            $(this).parent().find('input[type=radio]').each(function() {
+                var self = this;
+                
+                if(self.checked){
+                    total += parseFloat(self.value);
+                }
+            });
+            
+            $("#totalSum").html(total);
+        });
       </script>
 
   </body>

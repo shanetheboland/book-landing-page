@@ -1,0 +1,60 @@
+.button {
+	@include transition(all);
+	background: $blue;
+	border-radius: $border-radius;
+	color: $lightgray;
+	cursor: pointer;
+	display: inline-block;
+	padding: $spacing-unit $lg-spacing-unit;
+	text-align: center;
+	text-transform: uppercase;
+
+	&:visited {
+		background: $blue;
+		color: $lightgray;
+	}
+
+	&:hover {
+		background: $darkblue;
+		color: $white;
+		box-shadow: 2px 2px 2px rgba($black,.2);
+	}
+
+	&:active {
+		transform: translateY(2px);
+		box-shadow: 1px 1px 1px rgba($black,.5);
+	}
+
+}
+
+.secondary.button {
+	background: none;
+	color: $gray;
+	border-color: $gray;
+
+	&:visited {
+		background: none;
+		color: $gray;
+	}
+
+	&:hover {
+		background: none;
+		color: $blue;
+	}
+
+	&:active {
+		color: $darkblue;
+	}
+
+}
+
+.two-buttons {
+
+	.button {
+		width: 50%;
+		display: inline-block;
+		float: left;
+		padding: $border-radius*2 $border-width;
+	}
+
+}
