@@ -11,7 +11,7 @@
    ========================================================================== */
 .box {
    border-radius: $border-radius;
-   border: $border-radius solid $primary-color;
+   border: $border-width solid $primary-color;
    padding: $spacing-unit;
    padding-bottom: $lg-spacing-unit;
 }
@@ -20,8 +20,19 @@
 }
 
 header {
-   background-color: $lightgray;
-   box-shadow: 2px 2px 2px $gray;
+  background: $blue;
+  color: $white;
+}
+
+section.intro {
+  background: rgba($blue,.10);
+  border-bottom: $border-width solid $lightgray;
+}
+
+section {
+  h1 {
+    font-weight: 700;
+  }
 }
 
 footer {

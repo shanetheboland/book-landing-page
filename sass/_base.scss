@@ -12,8 +12,9 @@ html {
     box-sizing: inherit;
 }
 body {
-	height: 100%;
-    font: normal 400 20px/1.5 $body-font;
+	// height: 100%;
+    font-family: $body-font;
+    font-weight: 400;
     color: $text-color;
     background-color: $background-color;
 }
