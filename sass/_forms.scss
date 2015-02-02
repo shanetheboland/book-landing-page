@@ -1,3 +1,7 @@
+/* ==========================================================================
+   FORM & SURVEY STYLES
+   ========================================================================== */
+
 @font-face {
 	font-weight: normal;
 	font-style: normal;
@@ -78,32 +82,11 @@
 	-webkit-transform: translateY(0);
 	transform: translateY(0);
 }
-
-.show-next .questions li.current > span label {
-	-webkit-animation: moveUpFromDown 0.4s both;
-	animation: moveUpFromDown 0.4s both;
-}
-
-@-webkit-keyframes moveUpFromDown {
-	from { -webkit-transform: translateY(100%); }
-	to { -webkit-transform: translateY(0); }
-}
-
-@keyframes moveUpFromDown {
-	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
-	to { -webkit-transform: translateY(0); transform: translateY(0); }
-}
-
 /* Input field */
 .questions input {
-	// display: block;
 	margin: 0.3em 10px 0 0;
 	padding: 0.5em 1em 0.5em 0.7em;
-	// width: calc(100% - 2em);
-	border: none;
-	background: transparent;
-	color: rgba(0,0,0,0.8);
-	// font-size: 1em;
+	border: 0;
 	line-height: 1;
 	opacity: 0;
 	-webkit-transition: opacity 0.3s;
@@ -129,7 +112,7 @@
 .next {
 	position: absolute;
 	right: 0;
-	bottom: .3em; /* padding-bottom of form plus progress bar height */
+	bottom: 1em; /* padding-bottom of form plus progress bar height */
 	display: block;
 	padding: 0;
 	width: 3em;
@@ -138,14 +121,10 @@
 	background: none;
 	color: rgba(0,0,0,0.4);
 	text-align: center;
-	// opacity: 0;
 	z-index: 100;
 	cursor: pointer;
 	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
 	transition: transform 0.3s, opacity 0.3s;
-	// -webkit-transform: translateX(-20%);
-	// transform: translateX(-20%);
-	// pointer-events: none;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	opacity: 1;
 	-webkit-transform: translateX(0);
@@ -161,9 +140,6 @@
 	position: absolute;
 	top: -35px;
 	left: 0;
-	// border-radius: 50%;
-	// border: $border-width solid $blue;
-	// color: $blue;
 	width: 100%;
 	height: 100%;
 	content: "\e600";
@@ -328,11 +304,6 @@ input[type=text]::-ms-clear {
 	.simform {
 		font-size: 1.2em;
 	}
-}
-.external-link {
-	color:rgba(255,255,255,0.8);
-	padding:2px;
-	border-bottom:1px solid;
 }
 
 .questions li {
