@@ -810,12 +810,6 @@ blockquote {
   float: left;
   padding: 12px 2px; }
 
-form {
-  padding: 20px;
-  padding-bottom: 40px;
-  background: rgba(202, 3, 14, 0.05);
-  border-radius: 6px; }
-
 @font-face {
   font-weight: normal;
   font-style: normal;
@@ -906,7 +900,7 @@ form {
 
 /* Input field */
 .questions input {
-  margin: 0.3em 0 0 0;
+  margin: 0.3em 10px 0 0;
   padding: 0.5em 1em 0.5em 0.7em;
   border: none;
   background: transparent;
@@ -1033,7 +1027,6 @@ form {
 
 /* Error and final message */
 .simform .error-message, .simform .final-message {
-  position: absolute;
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.4s;
@@ -1046,23 +1039,25 @@ form {
   font-style: italic;
   font-size: 0.4em; }
 
-.final-message {
-  top: 50%;
-  left: 0;
-  padding: 0.5em;
-  width: 100%;
-  text-align: center;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
 .error-message.show, .final-message.show {
   visibility: visible;
   opacity: 1; }
 
 .final-message.show {
   -webkit-transition-delay: 0.5s;
-  transition-delay: 0.5s; }
+  transition-delay: 0.5s;
+  display: block;
+  padding: 20px;
+  background: rgba(202, 3, 14, 0.05);
+  border-radius: 6px;
+  width: 100%;
+  text-align: center; }
+
+.simform-inner {
+  padding: 20px;
+  padding-bottom: 40px;
+  background: rgba(202, 3, 14, 0.05);
+  border-radius: 6px; }
 
 /* Final hiding of form / showing message */
 .simform-inner.hide {
@@ -1149,6 +1144,9 @@ footer {
   background-color: #EEEEE6;
   -webkit-box-shadow: 2px 2px 2px #A2A1AC;
   box-shadow: 2px 2px 2px #A2A1AC; }
+
+.hide {
+  display: none; }
 
 /* Medium and Up - Targets everything larger than mobile
    ========================================================================== */
