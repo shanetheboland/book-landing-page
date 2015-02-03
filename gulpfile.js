@@ -9,6 +9,9 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     imagemin = require('gulp-imagemin'),
     minifyCSS = require('gulp-minify-css'),
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    notify = require('gulp-notify'),
     sass = require('gulp-sass'),
     csslint = require('gulp-csslint'),
     browserSync = require('browser-sync'),
@@ -45,6 +48,14 @@ gulp.task('csslint', function(){
           'known-properties': false
         }))
     .pipe(csslint.reporter());
+});
+
+gulp.task('js', function () {
+    return gulp.src('js/**/*.js') //select all javascript files under js/ and any subdirectory
+        .pipe(concat('script.min.js')) //the name of the resulting file
+        .pipe(uglify())
+        .pipe(gulp.dest('./js/')) //the destination folder
+        .pipe(notify({ message: 'Finished minifying JavaScript'}));
 });
 
 // Task that compiles scss files down to good old css
@@ -89,8 +100,10 @@ gulp.task('bs-reload', function () {
 
 */
 gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
-  gulp.start('pre-process', 'csslint', 'minify-img');
+  gulp.start('pre-process', 'csslint', 'minify-img', 'js');
   gulp.watch('sass/*.scss', ['pre-process']);
+  gulp.watch('js/*.js', ['js']);
+  gulp.watch('js/script.min.js', ['bs-reload']);
   gulp.watch('css/mnml.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);
 });
